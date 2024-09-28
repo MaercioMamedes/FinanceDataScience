@@ -7,3 +7,9 @@
 - #### Limpeza
 - #### Análise exploratória
 - #### Relatórios
+
+### Pipeline Ações
+- #### Extração
+- #### Limpeza
+- #### Análise exploratória
+- #### Relatórios
