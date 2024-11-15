@@ -1,7 +1,7 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 import pandas as pd
-
+from datetime import datetime
 
 # abrir página
 driver = WebDriver()
@@ -47,6 +47,8 @@ for tr in tbody.find_elements(By.TAG_NAME, "tr"):
 
 
 # salvar num arquivo csv
-
+now = datetime.now()
+timestamp = now.strftime("%Y%m%d_%H%M%S")
 df = pd.DataFrame(data=rows, columns=columns)
-df.to_csv("Pipeline_FII/data/scraping/data.csv", index=False, sep=";")
+
+df.to_csv(f"Pipeline_FII/data/1_scraping/data_{timestamp}.csv", index=False, sep=";")
